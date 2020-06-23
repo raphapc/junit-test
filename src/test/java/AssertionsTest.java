@@ -1,3 +1,4 @@
+import junit.runner.Version;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -60,6 +61,11 @@ public class AssertionsTest {
     public void testAssertArrayNotEquals (){
         int[] expectedArray = {1, 2, 3, 4};
         Assert.assertFalse(Arrays.equals(RocheTestClass.returnArray(), expectedArray));
+    }
+
+    @Test
+    public void testAssertVersion(){
+        Assert.assertEquals("4.12", Version.id());
     }
 
 }
